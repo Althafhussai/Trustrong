@@ -499,12 +499,12 @@ a, a:hover {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 0 40px;
 	height: 100px;
+	width: 100px;
 }
 
 .mry-app .mry-top-panel .mry-logo-frame .mry-logo {
-	width: 200px;
+	width: 100px;
 }
 
 /* Menu Button */
