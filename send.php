@@ -22,7 +22,7 @@
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style-light.css">
 
-	<title>Mireya</title>
+	<title>Trustrong</title>
 
 </head>
 
@@ -123,7 +123,7 @@ if (!$errors) {
 	// Setup for site owner
 	$to = "websolutions.ultimate@gmail.com"; // Your email goes here	
 	$subject = "Request";
-	$headers = "From: Mireya <replyto@yourdomain.com>";	
+	$headers = "From: Trustrong <replyto@yourdomain.com>";	
 	$message = "Request is arrived with the details below." . "\n\n";
 	$message .= "CONTACT DATA" . "\n";
 	$message .= "--\n";
@@ -143,7 +143,7 @@ if (!$errors) {
 	$usersubject = "Request confirmation";
 	$usermessage = "Dear " . $customer_first_name . " " . $customer_last_name . "," . "\n\n" . "Thank you for contacting us. We will reply shortly." . "\n\n";
 	$usermessage .= "Best Regards," . "\n";	
-	$usermessage .= "Mireya Team";
+	$usermessage .= "Trustrong Team";
 
 	// Send to the user
 	mail($user, $usersubject, $usermessage, $headers);
