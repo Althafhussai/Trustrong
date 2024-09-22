@@ -957,7 +957,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 
 .mry-project-slider-item .mry-project-frame .mry-cover-frame {
 	float: right;
-	width: 80%;
+	width: 100%;
 	height: 100%;
 	position: relative;
 	overflow: hidden;
@@ -968,7 +968,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	z-index: 1;
 	top: 0;
 	right: 0;
-	width: 92.5%;
+	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
