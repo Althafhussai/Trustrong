@@ -968,7 +968,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	z-index: 1;
 	top: 0;
 	right: 0;
-	width: 100%;
+	width: 92.5%;
 	height: 100%;
 	object-fit: cover;
 }
@@ -1006,7 +1006,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 
 .mry-project-slider-item .mry-project-frame.mry-project-half .mry-cover-frame {
 	float: right;
-	width: 60%;
+	width: 100%;
 	height: 100%;
 	position: relative;
 }
@@ -1015,13 +1015,19 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	position: absolute;
 	z-index: 3;
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
+	align-self: flex-end;
 	height: 100vh;
 	width: 100%;
 }
 
 .mry-project-slider-item .mry-main-title-frame .mry-main-title {
-	width: 100%;
+	width: 30%;
+	margin-left: 70%;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	background-color: #fff;
 }
 
 .mry-project-slider-item .mry-main-title-frame .mry-main-title h1 {
@@ -1056,16 +1062,17 @@ html.is-animating .transition-fade .mry-loading-curtain {
 		align-items: flex-end;
 	}
 	.mry-project-slider-item .mry-project-frame .mry-main-title-frame .mry-main-title {
-		margin-left: -15px;
-		padding: 40px;
+		margin-left: 40%;
+		align-items: flex-end;
+		padding: 20px;
 		background-color: #f7f8fa;
-		width: 100%;
+		width: 60%;
 		max-width: 430px;
 	}
 	.mry-project-slider-item .mry-project-frame .mry-main-title-frame .mry-main-title h1 {
 		position: relative;
 		overflow: hidden;
-		font-size: 32px;
+		font-size: 20px;
 		line-height: 38px;
 		font-weight: 900;
 		letter-spacing: -1px;
@@ -2246,4 +2253,16 @@ blockquote:after {
 .icon-order-success svg circle {
 	-webkit-animation: checkmark-circle 0.6s ease-in-out backwards;
 	animation: checkmark-circle 0.6s ease-in-out backwards
+}
+
+.mry-listItem-text {
+	font-size: 20px;
+	color: #000000;
+	cursor: pointer;
+}
+
+.mry-listItem-text-highlight {
+	font-size: 25px;
+	color: #ffb74d;
+	cursor: pointer;
 }
