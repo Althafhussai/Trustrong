@@ -2266,3 +2266,16 @@ blockquote:after {
 	color: #ffb74d;
 	cursor: pointer;
 }
+
+.about-section {
+	height: auto;
+	margin-top: 100px;
+	background-color: aliceblue;
+	overflow: hidden; 
+	position: relative;
+}
+
+.big-image {
+	height: auto;
+	width: 100%;
+}
