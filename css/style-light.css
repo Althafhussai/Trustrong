@@ -2275,7 +2275,34 @@ blockquote:after {
 	position: relative;
 }
 
-.big-image {
+.about-image {
 	height: auto;
+	margin: 0px;
+	padding: 0px;
 	width: 100%;
+}
+
+.about-txt1 {
+	font-size: 25px;
+	margin: 0px;
+	font-weight: bold;
+	padding: 0px;
+}
+
+.about-txt2 {
+	font-size: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.about-txt3 {
+	padding: 20px;
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+.content-title {
+	font-size: 30px;
+	margin-top: 60px;
+	font-weight: 700;
 }
