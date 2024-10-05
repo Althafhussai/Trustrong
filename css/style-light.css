@@ -1,5 +1,5 @@
 /*
-Template Name: Mireya
+Template Name: Trustrong
 Template URL: https://ultimatewebsolutions.net/mireya/intro/
 Author: Ultimate Websolutions
 Author URL: https://themeforest.net/user/ultimatewebsolutions/
@@ -1938,7 +1938,7 @@ blockquote:after {
 
 .mapboxgl-marker:after {
 	position: absolute;
-	content: 'Mireya';
+	content: 'Trustrong';
 	letter-spacing: 2px;
 	transform: translateX(-30%) translateY(10px);
 	display: block;
@@ -2333,4 +2333,19 @@ blockquote:after {
 	font-size: 30px;
 	margin-top: 60px;
 	font-weight: 700;
+}
+
+.custom-icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Custom styling for all icons */
+.mry-listItem-text i {
+    font-size: 24px; /* Adjust icon size */
+}
+
+.mry-listItem-text:hover .custom-icon {
+    color: #ffb74d; /* Change icon color on hover */
 }
