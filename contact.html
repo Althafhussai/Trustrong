@@ -111,7 +111,7 @@
                                 </ul>
                             </nav>
                         </div>
-                             <div class="col-md-4">
+                        <div class="col-md-4">
                             <div class="mry-info-box-frame">
                                 <div class="mry-info-box">
                                     <div class="mry-mb-20">
@@ -152,7 +152,8 @@
                         <div class="container">
                             <div class="mry-main-title mry-title-center">
                                 <div class="mry-subtitle mry-mb-20 mry-fo">Contact</div>
-                                <h1 class="mry-mb-20 mry-fo">Do you have any questions?
+                                <h1 class="mry-mb-20 mry-fo">
+                                    Do you have any questions?
                                     <br>
                                     <span class="mry-border-text">Write us a message.</span>
                                     <span class="mry-animation-el"></span>
@@ -192,8 +193,10 @@
                                                 </div>
                                                 <div class="mry-fade-object mry-mb-100">
                                                     <h4 class="mry-mb-20 mry-fo">Shall we talk?</h4>
-                                                    <p class="mry-text mry-fo">Email: support@trustrongdeveloper.com
-                                                        <br>Phone: +91 86675 75831
+                                                    <p class="mry-text mry-fo">
+                                                        Email: support@trustrongdeveloper.com
+                                                        <br>
+                                                        Phone: +91 86675 75831
                                                     </p>
                                                 </div>
                                             </div>
@@ -210,12 +213,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-8">
-                                    <form
-                                        method="POST"
-                                        id="form"
-                                        class="mry-form mry-mb-100"
-                                        action="send.php"
-                                    >
+                                    <form method="POST" id="contactForm" class="mry-form mry-mb-100">
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <label class="mry-label mry-fo" for="firstName">First Name</label>
@@ -226,7 +224,6 @@
                                                         placeholder="John"
                                                         class="mry-default-link"
                                                         type="text"
-                                                        data-parsley-pattern="^[a-zA-Z\s.]+$"
                                                         required
                                                     >
                                                 </div>
@@ -240,7 +237,6 @@
                                                         placeholder="Johnsone"
                                                         class="mry-default-link"
                                                         type="text"
-                                                        data-parsley-pattern="^[a-zA-Z\s.]+$"
                                                         required
                                                     >
                                                 </div>
@@ -269,7 +265,6 @@
                                                         placeholder="+91 1234567890"
                                                         class="mry-default-link"
                                                         type="text"
-                                                        data-parsley-pattern="^\+{1}[0-9]+$"
                                                     >
                                                 </div>
                                             </div>
@@ -284,8 +279,6 @@
                                                     cols="80"
                                                     placeholder="Type your message here"
                                                     class="mry-default-link"
-                                                    type="text"
-                                                    data-parsley-pattern="^[a-zA-Z0-9\s.:,!?']+$"
                                                     required
                                                 ></textarea>
                                             </div>
@@ -300,7 +293,7 @@
                                                 <p class="mry-text mry-simple-text mry-contact-hint mry-fo">
                                                     <span class="mry-color-text">*</span>
                                                     We promise not to share your personal information with
-												third parties.
+                                                third parties.
                                                 </p>
                                             </div>
                                         </div>
@@ -315,7 +308,8 @@
                         <div class="container">
                             <div class="mry-main-title mry-title-center mry-p-0-100">
                                 <div class="mry-subtitle mry-mb-20 mry-fo">Call to action</div>
-                                <h2 class="mry-h1 mry-mb-20 mry-fo">We have an offer
+                                <h2 class="mry-h1 mry-mb-20 mry-fo">
+                                    We have an offer
                                     <span class="mry-border-text">for you</span>
                                 </h2>
                                 <div class="mry-fo">
@@ -361,6 +355,35 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+        
+                const formData = {
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    message: document.getElementById('message').value,
+                };
+        
+                fetch('http://localhost:3001/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert('Message sent successfully');
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Error sending message');
+                });
+            });
+        </script>
         <!-- jquery js -->
         <script src="js/plugins/jquery.min.js"></script>
         <!-- tween max js -->
