@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-const PORT = 3001;
 
 // Middleware
 app.use(bodyParser.json());
@@ -15,14 +14,14 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: "althafhussai11@gmail.com", // Replace with your email
-    pass: "laabptuggnvpakjz", // Replace with your app password
+    pass: "laabptuggnvpakjz", // Replace with your app password (App Password from Gmail)
   },
   logger: true, // Enable logging for easier debugging
   debug: true, // Enable detailed error messages
 });
 
 // API endpoint to handle form submission
-app.post("/send-email", (req, res) => {
+app.post("/api/send-email", (req, res) => {
   const { firstName, lastName, email, phone, message } = req.body;
 
   const mailOptions = {
@@ -40,13 +39,12 @@ app.post("/send-email", (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log("Error:", error);
+      res.status(500).json({ message: "Error sending email" });
     } else {
       console.log("Email sent:", info.response);
+      res.status(200).json({ message: "Email sent successfully" });
     }
   });
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+module.exports = app; // Export the app for Vercel
