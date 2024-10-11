@@ -2352,6 +2352,8 @@ blockquote:after {
 
 .project-status-container {
     display: flex;
+	padding-top: 100px;
+	padding-bottom: 100px;
     justify-content: space-around;
     margin-top: 20px;
 }
@@ -2377,5 +2379,19 @@ blockquote:after {
 .project-status-item h3:hover {
     color: #ffb74d; /* Change color on hover */
     transition: color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+	.project-status-container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.project-status-item h3 {
+		font-size: 1.6rem;
+	}
+	
+	.project-status-item p {
+		font-size: 0.6rem;
+	}
 }
 
