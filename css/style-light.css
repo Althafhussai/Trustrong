@@ -2343,9 +2343,39 @@ blockquote:after {
 
 /* Custom styling for all icons */
 .mry-listItem-text i {
-    font-size: 24px; /* Adjust icon size */
+    font-size: 15px; /* Adjust icon size */
 }
 
 .mry-listItem-text:hover .custom-icon {
     color: #ffb74d; /* Change icon color on hover */
 }
+
+.project-status-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.project-status-item {
+    text-align: center;
+}
+
+.project-status-item h3 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.project-status-item p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Optional: Hover effect for numbers */
+.project-status-item h3:hover {
+    color: #ffb74d; /* Change color on hover */
+    transition: color 0.3s ease;
+}
+
