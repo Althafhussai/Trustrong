@@ -2353,7 +2353,6 @@ blockquote:after {
 .project-status-container {
     display: flex;
 	padding-top: 100px;
-	padding-bottom: 100px;
     justify-content: space-around;
     margin-top: 20px;
 }
@@ -2381,10 +2380,13 @@ blockquote:after {
     transition: color 0.3s ease;
 }
 
+.margin-top {
+	margin-top: 80px;
+}
+
 @media (max-width: 600px) {
 	.project-status-container {
 		padding-top: 50px;
-		padding-bottom: 50px;
 	}
 	.project-status-item h3 {
 		font-size: 1.6rem;
