@@ -2449,9 +2449,9 @@ blockquote:after {
 }
 
 /* Responsive for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .project-table th, .project-table td {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .project-icon {
