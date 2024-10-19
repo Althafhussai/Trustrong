@@ -2397,3 +2397,69 @@ blockquote:after {
 	}
 }
 
+/* Table Styling */
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.project-table th, .project-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.project-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.project-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.project-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.project-icon {
+    width: 50px; /* Adjust icon size */
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* View Button Styling */
+.view-button {
+    background-color: #fff;
+    color: #ffb74d;
+	border: 1px solid #ffb74d;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+    background-color: #ffb74d;
+	color: #fff;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .project-table th, .project-table td {
+        font-size: 0.9rem;
+    }
+
+    .project-icon {
+        width: 40px;
+    }
+
+    .view-button {
+        padding: 6px 12px;
+    }
+}
+
