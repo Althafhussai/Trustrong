@@ -1,1 +1,5 @@
 .vercel
+
+config.bat
+
+node_modules
